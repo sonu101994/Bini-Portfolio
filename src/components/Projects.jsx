@@ -1,39 +1,25 @@
 "use client";
 
+import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 export default function Projects() {
 
-  const [preview, setPreview] = useState(null);
+  const [previewVideo, setPreviewVideo] = useState(null);
 
   const projects = [
-    {
-      id: 1,
-      title: "Blinkit Landing Page",
-      description:
-        "A Blinkit-inspired responsive frontend UI focused on clean layouts, responsiveness and modern design principles.",
-
-      desktop: "/images/blinkit-desk.png",
-      mobile: "/images/blinkit-mobile.png",
-
-      usedTechs: ["HTML5", "CSS", "JavaScript"],
-
-      liveLink: "https://your-blinkit.vercel.app",
-
-      githubLink:
-        "https://github.com/sonu101994/blinkit-landing-page",
-    },
 
     {
-      id: 2,
+      id: 3,
       title: "Movie App",
       description:
         "Responsive movie browsing application with trailer viewing, favorites management and API integration.",
 
       desktop: "/images/movie-desktop.png",
-      mobile: "/images/movie-mobile.png",
+
+      video: "/videos/movie-app.mp4",
 
       usedTechs: ["React", "API Fetching", "Bootstrap"],
 
@@ -45,13 +31,14 @@ export default function Projects() {
     },
 
     {
-      id: 3,
+      id: 4,
       title: "Tutorials Freak",
       description:
         "Modern educational landing page with responsive sections, clean UI and optimized layout structure.",
 
       desktop: "/images/tutorial-desktop.png",
-      mobile: "/images/tutorial-mobile.png",
+
+      video: "/videos/tutorial-freak.mp4",
 
       usedTechs: ["HTML5", "CSS", "Bootstrap"],
 
@@ -60,6 +47,24 @@ export default function Projects() {
 
       githubLink:
         "https://github.com/sonu101994/tutorials-freak-LandingPage/",
+    },
+
+    {
+      id: 5,
+      title: "Blinkit Landing Page",
+      description:
+        "A Blinkit-inspired responsive frontend UI focused on clean layouts, responsiveness and modern design principles.",
+
+      desktop: "/images/blinkit-desk.png",
+
+      video: "/videos/blinkit-landing-page.mp4",
+
+      usedTechs: ["HTML5", "CSS", "JavaScript"],
+
+      liveLink: "https://your-blinkit.vercel.app",
+
+      githubLink:
+        "https://github.com/sonu101994/blinkit-landing-page",
     },
   ];
 
@@ -121,12 +126,11 @@ export default function Projects() {
               <div className="relative h-[260px] overflow-hidden">
 
                 {/* BACKGROUND IMAGE */}
-                <img
+                <Image
                   src={project.desktop}
                   alt={project.title}
+                  fill
                   className="
-                    w-full
-                    h-full
                     object-cover
                     scale-110
                     blur-[2px]
@@ -139,7 +143,7 @@ export default function Projects() {
                 {/* DARK OVERLAY */}
                 <div className="absolute inset-0 bg-black/50" />
 
-                {/* BUTTONS */}
+                {/* BUTTON */}
                 <div
                   className="
                     absolute
@@ -147,19 +151,17 @@ export default function Projects() {
                     flex
                     items-center
                     justify-center
-                    gap-4
                     z-20
                     px-4
                   "
                 >
 
-                  {/* DESKTOP BUTTON */}
                   <button
                     onClick={() =>
-                      setPreview(project.desktop)
+                      setPreviewVideo(project.video)
                     }
                     className="
-                      px-5
+                      px-6
                       py-3
                       rounded-2xl
                       bg-gradient-to-r
@@ -174,31 +176,7 @@ export default function Projects() {
                       shadow-[0_0_25px_rgba(59,130,246,0.35)]
                     "
                   >
-                    Desktop View
-                  </button>
-
-                  {/* MOBILE BUTTON */}
-                  <button
-                    onClick={() =>
-                      setPreview(project.mobile)
-                    }
-                    className="
-                      px-5
-                      py-3
-                      rounded-2xl
-                      bg-white/[0.08]
-                      backdrop-blur-xl
-                      border
-                      border-white/[0.08]
-                      text-white
-                      font-medium
-                      hover:bg-white/[0.12]
-                      hover:scale-105
-                      transition-all
-                      duration-300
-                    "
-                  >
-                    Mobile View
+                    Watch Demo
                   </button>
 
                 </div>
@@ -306,31 +284,29 @@ export default function Projects() {
 
       </div>
 
-      {/* IMAGE PREVIEW OVERLAY */}
+      {/* VIDEO PREVIEW OVERLAY */}
       <AnimatePresence>
 
-        {preview && (
+        {previewVideo && (
 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setPreview(null)}
             className="
               fixed
               inset-0
-              bg-black/95
+              bg-black
               z-[9999]
               flex
               items-center
               justify-center
-              p-4
             "
           >
 
             {/* CLOSE BUTTON */}
             <button
-              onClick={() => setPreview(null)}
+              onClick={() => setPreviewVideo(null)}
               className="
                 absolute
                 top-6
@@ -347,24 +323,26 @@ export default function Projects() {
                 hover:scale-110
                 transition-all
                 duration-300
+                z-50
               "
             >
               ×
             </button>
 
-            {/* IMAGE */}
-            <motion.img
-              initial={{ scale: 0.9 }}
+            {/* VIDEO */}
+            <motion.video
+              initial={{ scale: 0.95 }}
               animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
+              exit={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              src={preview}
-              alt="preview"
+              src={previewVideo}
+              controls
+              autoPlay
+              playsInline
               className="
-                max-w-full
-                max-h-[90vh]
+                max-w-7xl
+                max-h-[85vh]
                 object-contain
-                rounded-3xl
               "
             />
 
