@@ -1,19 +1,71 @@
 "use client";
 
-import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 export default function Projects() {
 
-  const [previewVideo, setPreviewVideo] = useState(null);
+  const [previewVideo, setPreviewVideo] = useState("");
 
   const projects = [
 
     {
+      id: 1,
+      title: "LiveSync Task Manager",
+
+      description:
+        "A real-time task management app featuring authentication, role-based access, task assignment, and live synchronization.",
+
+      desktop: "/images/LiveSync.png",
+
+      video: "/videos/LiveSync_TaskManager.mp4",
+
+      usedTechs: [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Vanilla JS",
+        "Socket.IO",
+        "Bootstrap",
+      ],
+
+      liveLink:
+        "https://livesync-taskmanager.onrender.com",
+
+      githubLink:
+        "https://github.com/sonu101994/LiveSync-TaskManager",
+    },
+
+    {
+      id: 2,
+      title: "Personal Portfolio",
+
+      description:
+        "A modern and responsive developer portfolio to showcase my projects, skills, certifications and development journey.",
+
+      desktop: "/images/portfolio.png",
+
+      video: "/videos/portfolio.mp4",
+
+      usedTechs: [
+        "Next.js",
+        "Tailwind CSS",
+        "Framer Motion",
+      ],
+
+      liveLink:
+        "https://vercel.com/sonu101994s-projects/bini-portfolio",
+
+      githubLink:
+        "https://github.com/sonu101994/Bini-Portfolio",
+    },
+
+    {
       id: 3,
       title: "Movie App",
+
       description:
         "Responsive movie browsing application with trailer viewing, favorites management and API integration.",
 
@@ -21,7 +73,11 @@ export default function Projects() {
 
       video: "/videos/movie-app.mp4",
 
-      usedTechs: ["React", "API Fetching", "Bootstrap"],
+      usedTechs: [
+        "React",
+        "API Fetching",
+        "Bootstrap",
+      ],
 
       liveLink:
         "https://movie-search-app-flax-five.vercel.app/",
@@ -33,6 +89,7 @@ export default function Projects() {
     {
       id: 4,
       title: "Tutorials Freak",
+
       description:
         "Modern educational landing page with responsive sections, clean UI and optimized layout structure.",
 
@@ -40,7 +97,11 @@ export default function Projects() {
 
       video: "/videos/tutorial-freak.mp4",
 
-      usedTechs: ["HTML5", "CSS", "Bootstrap"],
+      usedTechs: [
+        "HTML5",
+        "CSS",
+        "Bootstrap",
+      ],
 
       liveLink:
         "https://sonu101994.github.io/tutorials-freak-LandingPage/",
@@ -52,6 +113,7 @@ export default function Projects() {
     {
       id: 5,
       title: "Blinkit Landing Page",
+
       description:
         "A Blinkit-inspired responsive frontend UI focused on clean layouts, responsiveness and modern design principles.",
 
@@ -59,13 +121,19 @@ export default function Projects() {
 
       video: "/videos/blinkit-landing-page.mp4",
 
-      usedTechs: ["HTML5", "CSS", "JavaScript"],
+      usedTechs: [
+        "HTML5",
+        "CSS",
+        "JavaScript",
+      ],
 
-      liveLink: "https://your-blinkit.vercel.app",
+      liveLink:
+        "https://your-blinkit.vercel.app",
 
       githubLink:
         "https://github.com/sonu101994/blinkit-landing-page",
     },
+
   ];
 
   return (
@@ -76,11 +144,22 @@ export default function Projects() {
     >
 
       {/* Glow */}
-      <div className="absolute left-0 top-0 w-[400px] h-[400px] bg-white/[0.03] blur-[120px] rounded-full" />
+      <div
+        className="
+          absolute
+          left-0
+          top-0
+          w-[400px]
+          h-[400px]
+          bg-white/[0.03]
+          blur-[120px]
+          rounded-full
+        "
+      />
 
       <div className="max-w-7xl mx-auto relative z-10">
 
-        {/* Heading */}
+        {/* HEADING */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -100,8 +179,8 @@ export default function Projects() {
 
         </motion.div>
 
-        {/* GRID */}
-        <div className="grid lg:grid-cols-3 gap-10">
+        {/* PROJECTS */}
+        <div className="flex flex-col gap-10">
 
           {projects.map((project) => (
 
@@ -109,41 +188,50 @@ export default function Projects() {
               key={project.id}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -5 }}
               className="
                 glass
-                rounded-3xl
-                overflow-hidden
                 border
                 border-white/[0.06]
+                rounded-3xl
+                overflow-hidden
+                flex
+                flex-col
+                lg:flex-row
                 group
               "
             >
 
-              {/* IMAGE */}
-              <div className="relative h-[260px] overflow-hidden">
+              {/* IMAGE  */}
+              <div
+                className="
+                  relative
+                  lg:w-[42%]
+                  h-[240px]
+                  lg:h-auto
+                  overflow-hidden
+                  
+                "
+              >
 
-                {/* BACKGROUND IMAGE */}
                 <Image
                   src={project.desktop}
                   alt={project.title}
                   fill
                   className="
                     object-cover
-                    scale-110
-                    blur-[2px]
-                    group-hover:scale-125
+                    group-hover:scale-105
                     transition-all
                     duration-700
                   "
                 />
 
-                {/* DARK OVERLAY */}
-                <div className="absolute inset-0 bg-black/50" />
+                {/* OVERLAY */}
+                <div className="absolute inset-0 bg-black/35 " />
 
-                {/* BUTTON */}
+                {/* DEMO BUTTON TRIGGER */}
                 <div
                   className="
                     absolute
@@ -152,10 +240,9 @@ export default function Projects() {
                     items-center
                     justify-center
                     z-20
-                    px-4
                   "
                 >
-
+                  {/* BUTTON WHICH TRIGGER DEMO VIDEO */}
                   <button
                     onClick={() =>
                       setPreviewVideo(project.video)
@@ -183,19 +270,30 @@ export default function Projects() {
 
               </div>
 
-              {/* CONTENT */}
-              <div className="p-7">
+              {/* TEXT CONTENT */}
+              <div
+                className="
+                  flex-1
+                  p-8
+                  flex
+                  flex-col
+                "
+              >
 
-                <h3 className="text-2xl font-bold mb-4">
-                  {project.title}
-                </h3>
+                <div>
 
-                <p className="text-gray-400 leading-7 mb-6">
-                  {project.description}
-                </p>
+                  <h3 className="text-3xl font-bold mb-4">
+                    {project.title}
+                  </h3>
 
-                {/* TECH */}
-                <div className="flex flex-wrap gap-3 mb-8">
+                  <p className="text-gray-400 leading-8 mb-8">
+                    {project.description}
+                  </p>
+
+                </div>
+
+                {/* TECH STACK */}
+                <div className="flex flex-wrap gap-3 mb-10">
 
                   {project.usedTechs.map((tech, i) => (
 
@@ -219,12 +317,13 @@ export default function Projects() {
 
                 </div>
 
-                {/* LINKS */}
-                <div className="flex items-center gap-4">
+                {/* BUTTONS */}
+                <div className="flex items-center gap-4 mt-auto">
 
                   <a
                     href={project.liveLink}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="
                       flex-1
                       flex
@@ -236,10 +335,10 @@ export default function Projects() {
                       via-blue-600
                       to-indigo-600
                       rounded-2xl
-                      py-3
+                      py-3.5
                       font-medium
                       text-white
-                      hover:scale-[1.03]
+                      hover:scale-[1.02]
                       hover:shadow-[0_0_25px_rgba(59,130,246,0.35)]
                       transition-all
                       duration-300
@@ -252,6 +351,7 @@ export default function Projects() {
                   <a
                     href={project.githubLink}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="
                       w-14
                       h-14
@@ -260,13 +360,13 @@ export default function Projects() {
                       flex
                       items-center
                       justify-center
-                      hover:scale-110
-                      transition-all
-                      duration-300
                       border
                       border-white/[0.06]
                       hover:border-cyan-400/30
                       hover:bg-cyan-500/10
+                      hover:scale-110
+                      transition-all
+                      duration-300
                     "
                   >
                     <FaGithub />
@@ -284,7 +384,7 @@ export default function Projects() {
 
       </div>
 
-      {/* VIDEO PREVIEW OVERLAY */}
+      {/* DEMO VIDEO OF PROJECTS */}
       <AnimatePresence>
 
         {previewVideo && (
@@ -296,17 +396,18 @@ export default function Projects() {
             className="
               fixed
               inset-0
-              bg-black
-              z-[9999]
+              bg-black/95
+              z-[10000]
               flex
               items-center
               justify-center
+              p-4
             "
           >
 
             {/* CLOSE BUTTON */}
             <button
-              onClick={() => setPreviewVideo(null)}
+              onClick={() => setPreviewVideo("")}
               className="
                 absolute
                 top-6
@@ -329,7 +430,7 @@ export default function Projects() {
               ×
             </button>
 
-            {/* VIDEO */}
+            {/* VIDEO PLAYING  */}
             <motion.video
               initial={{ scale: 0.95 }}
               animate={{ scale: 1 }}
@@ -340,8 +441,10 @@ export default function Projects() {
               autoPlay
               playsInline
               className="
-                max-w-7xl
+                w-full
+                max-w-6xl
                 max-h-[85vh]
+                rounded-2xl
                 object-contain
               "
             />
@@ -353,5 +456,6 @@ export default function Projects() {
       </AnimatePresence>
 
     </section>
+
   );
 }

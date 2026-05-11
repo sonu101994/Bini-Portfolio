@@ -1,9 +1,8 @@
-/* Navbar.jsx */
 
 "use client";
 
-import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 
 export default function Navbar() {
@@ -69,12 +68,7 @@ export default function Navbar() {
 
             <span
               className="
-                bg-gradient-to-r
-                from-cyan-400
-                via-white
-                to-blue-500
-                bg-clip-text
-                text-transparent
+               gradient-text
               "
             >
               &lt;Bhawani Singh /&gt;
@@ -118,7 +112,8 @@ export default function Navbar() {
                       rounded-full
                       bg-cyan-400
                       transition-all
-                      duration-300
+                      duration-500
+                      ease-in-out
                       group-hover:w-full
                     "
                   ></span>
@@ -179,8 +174,9 @@ export default function Navbar() {
 
                   <motion.li
                     key={index}
-                    whileHover={{ y: -2 }}
-                    transition={{ duration: 0.2 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
                   >
 
                     <a
@@ -190,7 +186,6 @@ export default function Navbar() {
                         text-xl
                         font-medium
                         text-gray-300
-                        hover:text-white
                         transition-all
                         duration-300
                         block

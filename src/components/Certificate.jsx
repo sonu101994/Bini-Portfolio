@@ -64,6 +64,7 @@ export default function Certificate() {
                   object-top
                   group-hover:scale-105
                   transition
+                  blur-[2px]
                   duration-700
                 "
               />
@@ -232,7 +233,6 @@ export default function Certificate() {
               onClick={(e) => e.stopPropagation()}
               className="
                 relative
-                w-full
                 max-w-6xl
                 h-[90vh]
               "

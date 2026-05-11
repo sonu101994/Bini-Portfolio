@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Bhawani Singh | Full Stack Developer",
-  description: "Modern Full Stack Developer Portfolio",
+  title: "Bhawani Singh | Mern Stack Developer",
+  description: "Modern Mern Stack Developer Portfolio",
 };
 
 export default function RootLayout({ children }) {

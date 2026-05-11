@@ -46,7 +46,7 @@ export default function Hero() {
           "
         >
           <div className="relative">
-            {/* Subtle Glow */}
+            {/* Glow */}
             <div
               className="
                 absolute
@@ -56,7 +56,7 @@ export default function Hero() {
                 via-blue-500/10
                 to-indigo-500/20
                 rounded-full
-                blur-3xl
+                blur-2xl
                 opacity-60
                 animate-pulse
               "
@@ -66,7 +66,7 @@ export default function Hero() {
             <div
               className="
                 relative
-                p-[6px]
+                p-[4px]
                 rounded-full
                 border-2
                 border-white

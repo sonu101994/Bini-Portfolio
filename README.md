@@ -78,6 +78,9 @@ I’m currently looking for Junior Developer opportunities, internships and free
 
 Feel free to connect with me for collaboration, project discussions or opportunities.
 
+## Live Link
+* https://vercel.com/sonu101994s-projects/bini-portfolio
+
 ## Connect With Me
 
 * GitHub: [https://github.com/sonu101994]

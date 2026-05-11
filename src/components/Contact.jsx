@@ -114,7 +114,7 @@ export default function Contact() {
               items-center
               justify-center
               text-xl
-              hover:border-white/20
+              hover:border-white/[20]
               hover:scale-110
               transition-all
               duration-300

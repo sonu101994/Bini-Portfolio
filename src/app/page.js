@@ -5,11 +5,11 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
-import ScrollToTop from "@/components/scroolToTop";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Page() {
   return (
-    <main className="relative min-h-screen overflow-x-hidden text-white" px-10>
+    <main className="relative min-h-screen  text-white px-10" >
 
       <ScrollToTop />
 
@@ -24,7 +24,7 @@ export default function Page() {
       <Certificate />
 
       <Contact />
-      <Footer/>
+      <Footer />
 
     </main>
   );
