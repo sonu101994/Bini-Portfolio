@@ -84,7 +84,6 @@ export default function About() {
       id="about"
       className="
         py-28
-        px-1
         lg:px-6
         relative
         overflow-hidden
@@ -114,7 +113,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
 
           <p className="text-white/40 uppercase tracking-[4px] text-sm mb-4">
@@ -148,16 +147,18 @@ export default function About() {
           <div className="grid lg:grid-cols-2">
 
             {/* LEFT */}
-            <div className="p-8 md:p-12">
+            <div className="p-4 md:p-12">
 
               {/* TITLE */}
               <h3
                 className="
-                  text-3xl
+                  text-2xl
+                  md:text-3xl
                   lg:text-4xl
                   font-black
                   leading-tight
-                  mb-6
+                  mb-3
+                  md:mb-6
                   text-[#f5f5f5]
                 "
               >
@@ -202,7 +203,7 @@ export default function About() {
                 lg:border-l
                 border-white/[0.06]
                 bg-[#151515]
-                p-8
+                p-4
                 md:p-12
                 flex
                 flex-col

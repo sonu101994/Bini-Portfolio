@@ -32,7 +32,7 @@ export default function Navbar() {
       <div
         className="
           w-full
-          px-5
+          px-3
           lg:px-10
           py-5
           backdrop-blur-xl
@@ -59,7 +59,8 @@ export default function Navbar() {
           <a
             href="#home"
             className="
-              text-3xl
+              text-xl
+              sm:text-3xl
               lg:text-4xl
               font-black
               tracking-wide

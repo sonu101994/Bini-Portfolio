@@ -58,14 +58,14 @@ export default function Contact() {
 
     <section
       id="contact"
-      className="py-5 pt-24 px-2
+      className="py-5 pt-24 
         lg:px-6 relative overflow-hidden bg-[#101010]"
     >
 
       {/* Glow */}
       <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-white/[0.03] blur-[140px] rounded-full" />
 
-      <div className="lg:max-w-5xl max-w-7xl mx-auto relative z-10">
+      <div className=" max-w-7xl mx-auto relative z-10">
 
         {/* Heading */}
         <motion.div
@@ -80,12 +80,12 @@ export default function Contact() {
             Contact
           </p>
 
-          <h2 className="text-4xl md:text-6xl font-black leading-tight mb-6">
+          <h2 className="text-3xl  md:text-4xl lg:text-5xl font-black leading-tight mb-6">
             Let's Create Something
             <span className="gradient-text"> Great Together</span>
           </h2>
 
-          <p className="text-gray-400 max-w-2xl mx-auto leading-8 text-lg">
+          <p className="text-gray-400 max-w-2xl mx-auto leading-8 text-base md:text-lg">
             Currently looking for Junior Developer opportunities, internships and freelance projects where I can contribute, learn and grow through real-world development experience.
           </p>
 
@@ -209,9 +209,10 @@ export default function Contact() {
             border
             border-white/[0.06]
             rounded-[36px]
-            p-8
+            p-4
             md:p-12
-            space-y-7
+            space-y-5
+            md:space-y-7
           "
         >
 

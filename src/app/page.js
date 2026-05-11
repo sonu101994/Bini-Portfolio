@@ -9,7 +9,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Page() {
   return (
-    <main className="relative min-h-screen  text-white px-10" >
+    <main className="relative min-h-screen  text-white px-4 md:px-10" >
 
       <ScrollToTop />
 

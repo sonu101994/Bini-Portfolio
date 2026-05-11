@@ -28,7 +28,8 @@ export default function Footer() {
                  relative
                  z-10
                  w-full
-                 px-6
+                 px-2
+                 md:px-6
                  py-5
                  lg:px-10
                  max-w-7xl
@@ -119,7 +120,7 @@ export default function Footer() {
                         <FaLinkedin />
                     </a>
                 </div>
-                 <p>&copy;2026| Designed & Built by Bhawani Singh</p>
+                 <p className="text-sm text-center">&copy;2026| Designed & Built by Bhawani Singh</p>
             </motion.div>
 
         </footer>

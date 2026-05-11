@@ -140,7 +140,7 @@ export default function Projects() {
 
     <section
       id="projects"
-      className="py-28 px-2
+      className="py-28 
         lg:px-6 relative overflow-hidden bg-[#101010]"
     >
 
@@ -166,14 +166,14 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-12 lg:mb-20"
         >
 
           <p className="text-white/40 uppercase tracking-[4px] text-sm mb-4">
             Portfolio
           </p>
 
-          <h2 className="text-4xl lg:text-5xl font-black">
+          <h2 className="text-3xl lg:text-4xl lg:text-5xl font-black">
             Featured
             <span className="gradient-text"> Projects</span>
           </h2>
@@ -295,7 +295,7 @@ export default function Projects() {
                 </div>
 
                 {/* TECH STACK */}
-                <div className="flex flex-wrap gap-3 mb-10">
+                <div className="flex flex-wrap gap-3 mb-5  md:mb-10">
 
                   {project.usedTechs.map((tech, i) => (
 

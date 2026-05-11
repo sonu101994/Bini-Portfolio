@@ -13,7 +13,6 @@ export default function Hero() {
         min-h-screen
         flex
         items-center
-        px-2
         lg:px-6
         overflow-hidden
         bg-[#101010]
@@ -116,7 +115,7 @@ export default function Hero() {
         >
           
 
-          <h1 className="text-5xl lg:text-7xl font-black leading-tight mb-6">
+          <h1 className=" text-3xl md:text-4xl lg:text-7xl font-black leading-tight mb-6">
             Hi, I'm <br />
 
             <span className="gradient-text">

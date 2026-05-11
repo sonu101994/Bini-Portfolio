@@ -11,7 +11,7 @@ export default function Certificate() {
   return (
     <section
       id="certificates"
-      className="py-28 px-1
+      className="py-28 
         lg:px-6 relative overflow-hidden bg-[#101010]"
     >
 
@@ -24,13 +24,13 @@ export default function Certificate() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-10 lg:mb-20"
         >
           <p className=" text-white/40 uppercase tracking-[4px] text-sm mb-4">
             Achievement
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-black">
+          <h2 className="text-3xl md:text-5xl font-black">
             Professional
             <span className="gradient-text"> Certification</span>
           </h2>
@@ -54,7 +54,7 @@ export default function Certificate() {
           <div className="grid lg:grid-cols-2">
 
             {/* IMAGE SIDE */}
-            <div className="relative min-h-[350px] lg:min-h-[500px] group overflow-hidden">
+            <div className="relative min-h-[300px] md:min-h-[350px] lg:min-h-[500px] group overflow-hidden">
 
               <Image
                 src="/images/web-certificate.png"
@@ -82,7 +82,8 @@ export default function Certificate() {
                     flex
                     items-center
                     gap-2
-                    px-6
+                    px-3
+                    sm:px-6
                     py-3
                     rounded-2xl
                     bg-gradient-to-r
@@ -90,6 +91,8 @@ export default function Certificate() {
                     via-cyan-600
                     to-indigo-600
                     text-white
+                    text-sm
+                    md:text-base
                     font-medium
                     shadow-[0_0_25px_rgba(59,130,246,0.35)]
                     hover:shadow-[0_0_35px_rgba(34,211,238,0.45)]
@@ -109,7 +112,8 @@ export default function Certificate() {
                     flex
                     items-center
                     gap-2
-                    px-6
+                    sm:px-6
+                    px-3
                     py-3
                     rounded-2xl
                     bg-white/[0.04]
@@ -117,6 +121,8 @@ export default function Certificate() {
                     border
                     border-cyan-400/20
                     text-white
+                    text-sm
+                    md:text-base
                     hover:bg-cyan-500/10
                     hover:border-cyan-400/40
                     hover:shadow-[0_0_25px_rgba(34,211,238,0.15)]
@@ -139,13 +145,13 @@ export default function Certificate() {
                 Recently Completed
               </p>
 
-              <h3 className="text-3xl lg:text-5xl font-black leading-tight mb-8">
+              <h3 className="text-2xl md:text-3xl lg:text-5xl font-black leading-tight mb-5">
                 MERN Stack
                 <br />
                 Development
               </h3>
 
-              <p className="text-gray-400 leading-8 text-lg mb-8">
+              <p className="text-gray-400 leading-8 md:text-lg text-base mb-8">
                 Successfully completed a MERN Stack Web Development certification from WsCube Tech Jaipur, focused on React, Next.js, Node.js, Express.js and MongoDB. Gained hands-on experience by building responsive web applications and learning real-world development workflows and project scenarios.
               </p>
 
