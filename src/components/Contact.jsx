@@ -58,13 +58,14 @@ export default function Contact() {
 
     <section
       id="contact"
-      className="py-5 pt-24 px-6 relative overflow-hidden bg-[#101010]"
+      className="py-5 pt-24 px-2
+        lg:px-6 relative overflow-hidden bg-[#101010]"
     >
 
       {/* Glow */}
       <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-white/[0.03] blur-[140px] rounded-full" />
 
-      <div className="max-w-5xl mx-auto relative z-10">
+      <div className="lg:max-w-5xl max-w-7xl mx-auto relative z-10">
 
         {/* Heading */}
         <motion.div

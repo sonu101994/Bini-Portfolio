@@ -84,7 +84,8 @@ export default function About() {
       id="about"
       className="
         py-28
-        px-6
+        px-1
+        lg:px-6
         relative
         overflow-hidden
         bg-[#101010]

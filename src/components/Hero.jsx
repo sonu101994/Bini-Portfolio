@@ -13,7 +13,8 @@ export default function Hero() {
         min-h-screen
         flex
         items-center
-        px-6
+        px-2
+        lg:px-6
         overflow-hidden
         bg-[#101010]
         py-28

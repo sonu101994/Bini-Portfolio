@@ -11,7 +11,8 @@ export default function Certificate() {
   return (
     <section
       id="certificates"
-      className="py-28 px-6 relative overflow-hidden bg-[#101010]"
+      className="py-28 px-1
+        lg:px-6 relative overflow-hidden bg-[#101010]"
     >
 
 
@@ -132,7 +133,7 @@ export default function Certificate() {
             </div>
 
             {/* CONTENT SIDE */}
-            <div className="p-10 lg:p-14 flex flex-col justify-center">
+            <div className="p-4 lg:p-14 flex flex-col justify-center">
 
               <p className="text-cyan-400 uppercase tracking-[3px] text-sm mb-5">
                 Recently Completed

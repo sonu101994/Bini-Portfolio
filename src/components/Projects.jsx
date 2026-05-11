@@ -140,7 +140,8 @@ export default function Projects() {
 
     <section
       id="projects"
-      className="py-28 px-6 relative overflow-hidden bg-[#101010]"
+      className="py-28 px-2
+        lg:px-6 relative overflow-hidden bg-[#101010]"
     >
 
       {/* Glow */}
@@ -274,7 +275,8 @@ export default function Projects() {
               <div
                 className="
                   flex-1
-                  p-8
+                  p-3
+                  lg:p-8
                   flex
                   flex-col
                 "

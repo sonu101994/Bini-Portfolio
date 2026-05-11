@@ -25,7 +25,7 @@ export default function Navbar() {
         top-0
         left-0
         w-full
-        z-[9999]
+        z-[99999]
       "
     >
 
@@ -151,7 +151,7 @@ export default function Navbar() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3 }}
               className="
-                md:hidden
+                lg:hidden
                 mt-5
               "
             >
