@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import { FaDownload, FaExpand } from "react-icons/fa";
 
 export default function Certificate() {
@@ -241,6 +241,7 @@ export default function Certificate() {
               className="
                 relative
                 max-w-6xl
+                w-[95vw]
                 h-[90vh]
               "
             >
@@ -248,6 +249,7 @@ export default function Certificate() {
                 src="/images/web-certificate.png"
                 alt="certificate"
                 fill
+                sizes="95vw"
                 className="object-contain rounded-3xl"
               />
             </motion.div>

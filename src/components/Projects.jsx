@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { FaExternalLinkAlt, FaGithub, FaPlay } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaPlay,FaTimes } from "react-icons/fa";
 
 export default function Projects() {
 
@@ -17,13 +17,13 @@ export default function Projects() {
       title: "iShop E-Commerce",
       label: "MERN Stack App",
       description:
-      "A complete electronics e-commerce platform with customer storefront, protected admin panel, product search and filtering, cart and wishlist management, address handling, COD checkout, Razorpay online payment flow, order tracking, and admin-side management for products, categories, brands, colors, users, and orders.",
+        "A complete electronics e-commerce platform with customer storefront, protected admin panel, product search and filtering, cart and wishlist management, address handling, COD checkout, Razorpay online payment flow, order tracking, and admin-side management for products, categories, brands, colors, users, and orders.",
       desktop: "/images/iShop.png",
       video: "/videos/iShop_video_demo.mp4",
       highlights: [
         "Admin panel",
         "products,Cart & wishlist",
-        "filter, search & tracking",  
+        "filter, search & tracking",
       ],
       usedTechs: [
         "Next.js",
@@ -101,7 +101,7 @@ export default function Projects() {
       label: "Landing Page",
       description:
         "A modern educational landing page focused on responsive sections, clean visual hierarchy, reusable layout blocks, and consistent spacing",
-      desktop:"/images/totorial_freak.png",
+      desktop: "/images/totorial_freak.png",
       video: "/videos/tutorial_demo.mp4",
       highlights: [
         "Responsive sections",
@@ -250,37 +250,43 @@ export default function Projects() {
           ))}
         </div>
       </div>
-
       <AnimatePresence>
         {previewVideo && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/95 z-[10000] flex items-center justify-center p-4"
+            // onClick={() => setPreviewVideo("")}
+            className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/95 px-4"
           >
-            <button
-              type="button"
-              onClick={() => setPreviewVideo("")}
-              aria-label="close project demo video"
-              className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 backdrop-blur-xl border border-white/10 text-white text-2xl hover:scale-110 transition-all duration-300 z-50"
-            >
-              ×
-            </button>
-
-            <motion.video
+            <motion.div
               initial={{ scale: 0.95 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              src={previewVideo}
-              controls
-              autoPlay
-              muted
-              playsInline
-              preload="metadata"
-              className="w-full max-w-6xl max-h-[85vh] rounded-2xl object-contain"
-            />
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-6xl"
+            >
+              {/* Close Button */}
+              <button
+                type="button"
+                onClick={() => setPreviewVideo("")}
+                aria-label="Close video preview"
+                className="absolute -top-14 right-0 z-[100000] flex h-9 w-9 items-center justify-center rounded-full bg-white text-black shadow-lg transition-all duration-300 hover:scale-110"
+              >
+                <FaTimes className="text-xl" />
+              </button>
+
+              <video
+                src={previewVideo}
+                controls
+                autoPlay
+                muted
+                playsInline
+                preload="metadata"
+                className="w-full max-h-[85vh] rounded-2xl object-contain"
+              />
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
