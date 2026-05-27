@@ -100,8 +100,8 @@ export default function Projects() {
       title: "Tutorials Freak",
       label: "Landing Page",
       description:
-        "A modern educational landing page focused on responsive sections, clean visual hierarchy, reusable layout blocks, and consistent spacing.",
-      desktop: "/images/tutorial_freak.png",
+        "A modern educational landing page focused on responsive sections, clean visual hierarchy, reusable layout blocks, and consistent spacing",
+      desktop:"/images/totorial_freak.png",
       video: "/videos/tutorial_demo.mp4",
       highlights: [
         "Responsive sections",
