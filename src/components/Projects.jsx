@@ -11,6 +11,33 @@ export default function Projects() {
   const [previewVideo, setPreviewVideo] = useState("");
   /* Making An Array Of Project Details */
   const projects = [
+
+    {
+      id: 1,
+      title: "iShop E-Commerce",
+      label: "MERN Stack App",
+      description:
+        "A full-stack e-commerce platform with admin dashboard, product management, cart, wishlist,filter, checkout, order tracking, user authentication, and Razorpay payment integration.",
+      desktop: "/images/iShop.png",
+      video: "/videos/iShop_video_demo.mp4",
+      highlights: [
+        "Admin dashboard",
+        "Cart & wishlist",
+        "Razorpay checkout",
+        "filter & search"
+      ],
+      usedTechs: [
+        "Next.js",
+        "Tailwind CSS",
+        "Redux Toolkit",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Razorpay",
+      ],
+      liveLink: "https://i-shop-8k1t.vercel.app",
+      githubLink: "https://github.com/sonu101994/iShop",
+    },
     {
       id: 2,
       title: "LiveSync Task Manager",
@@ -18,7 +45,7 @@ export default function Projects() {
       description:
         "A real-time task management platform with authentication, role-based access, task assignment, and live synchronization using Socket.IO.",
       desktop: "/images/LiveSync.png",
-      video: "/videos/LiveSync_TaskManager.mp4",
+      video: "/videos/LiveSync_demo.mp4",
       highlights: [
         "Real-time task updates",
         "Role-based dashboards",
@@ -32,7 +59,7 @@ export default function Projects() {
         "Socket.IO",
         "Bootstrap",
       ],
-      liveLink: "https://livesync-taskmanager.onrender.com",
+      liveLink: "https://live-sync-task-manager.vercel.app",
       githubLink: "https://github.com/sonu101994/LiveSync-TaskManager",
     },
     {
@@ -42,7 +69,7 @@ export default function Projects() {
       description:
         "A modern and responsive developer portfolio designed to showcase projects, skills, certifications, and development journey with smooth interactions.",
       desktop: "/images/portfolio.png",
-      video: "/videos/portfolio.mp4",
+      video: "/videos/portfolio_demo.mp4",
       highlights: [
         "Responsive layout",
         "Smooth animations",
@@ -58,14 +85,14 @@ export default function Projects() {
       label: "React App",
       description:
         "A responsive movie browsing application with trailer viewing, favorites management, clean UI states, and API-based movie search functionality.",
-      desktop: "/images/movie-desktop.png",
-      video: "/videos/movie-app.mp4",
+      desktop: "/images/movie_search.png",
+      video: "/videos/movie--search_demo.mp4",
       highlights: [
         "Movie search",
         "Trailer preview",
         "Favorites management",
       ],
-      usedTechs: ["React", "API Fetching", "Bootstrap"],
+      usedTechs: ["React", "REST API", "Bootstrap"],
       liveLink: "https://movie-search-app-flax-five.vercel.app/",
       githubLink: "https://github.com/sonu101994/Movie_Search_App",
     },
@@ -75,8 +102,8 @@ export default function Projects() {
       label: "Landing Page",
       description:
         "A modern educational landing page focused on responsive sections, clean visual hierarchy, reusable layout blocks, and consistent spacing.",
-      desktop: "/images/tutorial-desktop.png",
-      video: "/videos/tutorial-freak.mp4",
+      desktop: "/images/tutorial_freak",
+      video: "/videos/tutorial_demo.mp4",
       highlights: [
         "Responsive sections",
         "Clean layout",
@@ -86,7 +113,7 @@ export default function Projects() {
       liveLink: "https://sonu101994.github.io/tutorials-freak-LandingPage/",
       githubLink: "https://github.com/sonu101994/tutorials-freak-LandingPage/",
     },
-   
+
   ];
 
   return (
