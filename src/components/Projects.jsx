@@ -17,14 +17,13 @@ export default function Projects() {
       title: "iShop E-Commerce",
       label: "MERN Stack App",
       description:
-        "A full-stack e-commerce platform with admin dashboard, product management, cart, wishlist,filter, checkout, order tracking, user authentication, and Razorpay payment integration.",
+      "A complete electronics e-commerce platform with customer storefront, protected admin panel, product search and filtering, cart and wishlist management, address handling, COD checkout, Razorpay online payment flow, order tracking, and admin-side management for products, categories, brands, colors, users, and orders.",
       desktop: "/images/iShop.png",
       video: "/videos/iShop_video_demo.mp4",
       highlights: [
-        "Admin dashboard",
-        "Cart & wishlist",
-        "Razorpay checkout",
-        "filter & search"
+        "Admin panel",
+        "products,Cart & wishlist",
+        "filter, search & tracking",  
       ],
       usedTechs: [
         "Next.js",
@@ -102,7 +101,7 @@ export default function Projects() {
       label: "Landing Page",
       description:
         "A modern educational landing page focused on responsive sections, clean visual hierarchy, reusable layout blocks, and consistent spacing.",
-      desktop: "/images/tutorial_freak",
+      desktop: "/images/tutorial_freak.png",
       video: "/videos/tutorial_demo.mp4",
       highlights: [
         "Responsive sections",
