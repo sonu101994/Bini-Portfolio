@@ -42,7 +42,7 @@ export default function Projects() {
       title: "LiveSync Task Manager",
       label: "Full Stack App",
       description:
-        "A real-time task management platform with authentication, role-based access, task assignment, and live synchronization using Socket.IO.",
+        "A real-time task management platform where users can be added, assigned tasks, and managed with role-based access. Tasks can be created, updated, deleted, moved between statuses, and assigned to specific users, with all changes synced live using Socket.IO.",
       desktop: "/images/LiveSync.png",
       video: "/videos/LiveSync_demo.mp4",
       highlights: [

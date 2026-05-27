@@ -132,7 +132,7 @@ export default function Hero() {
           {/* BUTTONS */}
           <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
             <a
-              href="/sonu-resume.pdf"
+              href="/images/BHAWANI SINGH-RESUME.pdf"
               download
               className="
                 px-8
