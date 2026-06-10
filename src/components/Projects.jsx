@@ -165,7 +165,7 @@ export default function Projects() {
                   </span>
 
                   {index === 0 && (
-                    <span className="rounded-full border border-cyan-400/20 bg-cyan-500/10 px-4 py-2 text-xs font-medium text-black-200 backdrop-blur-md">
+                    <span className="rounded-full border border-cyan-400/20 bg-cyan-500/10 px-4 py-2 text-xs font-medium text-dark-500 backdrop-blur-md">
                       Featured
                     </span>
                   )}
