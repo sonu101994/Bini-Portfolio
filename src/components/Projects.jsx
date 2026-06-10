@@ -34,7 +34,7 @@ export default function Projects() {
         "MongoDB",
         "Razorpay",
       ],
-      liveLink: "https://i-shop-8k1t.vercel.app",
+      liveLink: "https://bini-portfolio.vercel.app/",
       githubLink: "https://github.com/sonu101994/iShop",
     },
     {
