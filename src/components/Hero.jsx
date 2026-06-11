@@ -102,6 +102,7 @@ export default function Hero() {
         </motion.div>
 
         {/* TEXT */}
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -113,7 +114,7 @@ export default function Hero() {
             md:order-1
           "
         >
-          
+
 
           <h1 className=" text-3xl md:text-4xl lg:text-7xl font-black leading-tight mb-6">
             Hi, I'm <br />
@@ -124,10 +125,10 @@ export default function Hero() {
           </h1>
 
 
-            <p className="text-white/40 uppercase tracking-[4px] text-sm mb-5">
+          <p className="text-white/40 uppercase tracking-[4px] text-sm mb-5">
             Mern Stack Developer
           </p>
-        
+
 
           {/* BUTTONS */}
           <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
@@ -200,7 +201,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/bhawanisinghdev/"
               target="_blank"
               className="
                 w-12

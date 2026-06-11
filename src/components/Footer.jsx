@@ -97,8 +97,9 @@ export default function Footer() {
                     </a>
 
                     <a
-                        href="https://linkedin.com"
+                        href="https://www.linkedin.com/in/bhawanisinghdev/"
                         target="_blank"
+                        rel="noopener noreferer"
                         className="
               w-11
               h-11
