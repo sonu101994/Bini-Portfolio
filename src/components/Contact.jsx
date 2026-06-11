@@ -127,9 +127,11 @@ export default function Contact() {
           <a
             href="https://github.com/sonu101994"
             target="_blank"
+            rel="noreferer noopener"
             className="
               w-14
               h-14
+              
               rounded-2xl
               glass
               border
@@ -148,7 +150,8 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/bhawanisinghdev/"
+            rel="noreferer noopener"
             target="_blank"
             className="
               w-14
